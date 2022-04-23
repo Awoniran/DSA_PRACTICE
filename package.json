@@ -1,0 +1,15 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "factorial.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon factorial.js"
+  },
+  "author": "michael awoniran",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
