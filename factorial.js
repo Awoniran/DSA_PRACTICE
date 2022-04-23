@@ -26,4 +26,31 @@ function calMaxArea(array) {
         console.log(array[i] * array[q], array[i]);
     }
 }
-calMaxArea(array1);
+// calMaxArea(array1);
+
+/* you are given an array of positive integers where 
+each integer represents the height of a vertical line
+on a chart find two lines which together with the x-axis
+forms a container that would hold the greatest amount of water. 
+Return the area of water it should hold*/
+
+// function doubleForLoop(array) {
+//     for (p = 0; p < array.length; p++) {
+//         // const q = p + 1;
+//         // console.log(array[p], array[q]);
+//         for (q = 0; q < array.length; q++) {
+//             console.log(`${array[p]}_${array[q]}`);
+//         }
+//     }
+// }
+// doubleForLoop([0, 1, 2, 3, 4, 5, 6, 7]);
+
+function reverse(string) {
+    let newString = '';
+    for (p = 0; p < string.length; p++) {
+        let q = string.length - (p + 1);
+        newString += string[q];
+    }
+    return newString;
+}
+reverse('micheal opeyemi');
