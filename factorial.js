@@ -34,23 +34,18 @@ on a chart find two lines which together with the x-axis
 forms a container that would hold the greatest amount of water. 
 Return the area of water it should hold*/
 
-// function doubleForLoop(array) {
-//     for (p = 0; p < array.length; p++) {
-//         // const q = p + 1;
-//         // console.log(array[p], array[q]);
-//         for (q = 0; q < array.length; q++) {
-//             console.log(`${array[p]}_${array[q]}`);
-//         }
-//     }
-// }
-// doubleForLoop([0, 1, 2, 3, 4, 5, 6, 7]);
+// const array = [];
 
-function reverse(string) {
-    let newString = '';
-    for (p = 0; p < string.length; p++) {
-        let q = string.length - (p + 1);
-        newString += string[q];
+function maxArea(array) {
+    let results = [];
+    for (p = 0; p < array.length; p++) {
+        for (q = 0; q < array.length; q++) {
+            if (array[p] < array[q]) {
+                results.push(array[p] * (q - p));
+            }
+        }
     }
-    return newString;
+    if (array.length === 0) return 0;
+    return Math.max(...results);
 }
-reverse('micheal opeyemi');
+console.log(maxArea([6, 9, 3, 4, 5, 8]));
